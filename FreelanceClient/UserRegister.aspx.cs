@@ -11,6 +11,7 @@ namespace FreelanceClient
 {
     public partial class UserRegister : System.Web.UI.Page
     {
+        String Gender;
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -21,23 +22,43 @@ namespace FreelanceClient
             try
             {
                 User user = new User();
-                user.Username = "Sanskar";
-                user.Password = "Sanskar";
-                user.Name = "Sanskar";
-                user.Phone = "7802853014";
-                user.IsFreelancer = true;
-                user.DateOfBirth = DateTime.Now;
-                user.Details = "HII";
-                user.Email = "Sanskar@gmail.com";
-                user.Gender = "Male";
-                string msg = client.CreateUser(user);
-                Label1.Text = msg;
+                user.Username = username.Text;
+                user.Password = password.Text;
+                user.Name = name.Text;
+                user.Phone = phone.Text;
+                user.IsFreelancer = true;   
+                user.DateOfBirth = dob.SelectedDate;
+                user.Details = usrDescription.Text;
+                user.Email = EmailID.Text;
+                if(RadioButton1.Checked)
+                    user.Gender = "Male";
+                else if(RadioButton2.Checked)
+                    user.Gender = "Female";
+                string res = client.CreateUser(user);
+                msg.Text = res;
+                if(res!="Error")
+                    msg.ForeColor = System.Drawing.Color.Green;
+                else
+                    msg.ForeColor = System.Drawing.Color.Red;
             }
             catch (Exception ex)
             {
-                string msg = "ClientError";
-                Label1.Text = msg;
+                string res = "ClientError";
+                msg.Text = ex.Message;
+                msg.ForeColor = System.Drawing.Color.Red;
             }
         }
+
+        protected void RadioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            Gender = "Male";
+        }
+
+        protected void RadioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            Gender = "Female";
+        }
+
+        
     }
 }
