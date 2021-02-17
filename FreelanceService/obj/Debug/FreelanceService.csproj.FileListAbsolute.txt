@@ -1,0 +1,7 @@
+C:\Users\ASUS\Documents\soc\FreelanceService\bin\FreelanceService.dll.config
+C:\Users\ASUS\Documents\soc\FreelanceService\bin\FreelanceService.dll
+C:\Users\ASUS\Documents\soc\FreelanceService\bin\FreelanceService.pdb
+C:\Users\ASUS\Documents\soc\FreelanceService\obj\Debug\FreelanceService.csprojAssemblyReference.cache
+C:\Users\ASUS\Documents\soc\FreelanceService\obj\Debug\FreelanceService.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Documents\soc\FreelanceService\obj\Debug\FreelanceService.dll
+C:\Users\ASUS\Documents\soc\FreelanceService\obj\Debug\FreelanceService.pdb

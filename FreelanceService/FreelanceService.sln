@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30309.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreelanceService", "FreelanceService.csproj", "{D9F66C73-763B-4240-ACBE-B840FECCAFBB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreelanceClient", "..\FreelanceClient\FreelanceClient.csproj", "{D29EFF30-A7B0-4981-BDFF-E1D69682BFAE}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D9F66C73-763B-4240-ACBE-B840FECCAFBB} = {D9F66C73-763B-4240-ACBE-B840FECCAFBB}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D9F66C73-763B-4240-ACBE-B840FECCAFBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9F66C73-763B-4240-ACBE-B840FECCAFBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9F66C73-763B-4240-ACBE-B840FECCAFBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9F66C73-763B-4240-ACBE-B840FECCAFBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D29EFF30-A7B0-4981-BDFF-E1D69682BFAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D29EFF30-A7B0-4981-BDFF-E1D69682BFAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D29EFF30-A7B0-4981-BDFF-E1D69682BFAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D29EFF30-A7B0-4981-BDFF-E1D69682BFAE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D58A1BB8-0495-4D2B-A2E2-8678B2616AD4}
+	EndGlobalSection
+EndGlobal
