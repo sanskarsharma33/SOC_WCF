@@ -12,8 +12,10 @@
     </style>
 </head>
 <body>
+    <header><center><h1>REGISTER USER</h1></center></header>
     <form id="form1" runat="server">
-        <div>           
+        <div>
+            <center>
   <table class="auto-style1"> 
       <tr>  
     <td>  
@@ -49,7 +51,14 @@
     <asp:Label ID="doblbl" runat="server" Text="DOB"></asp:Label>  
     </td>  
     <td>  
-        <asp:Calendar ID="dob" runat="server"></asp:Calendar>
+        <asp:Calendar ID="dob" runat="server" BackColor="White" BorderColor="White" BorderWidth="1px" Font-Names="Verdana" Font-Size="9pt" ForeColor="Black" Height="190px" NextPrevFormat="FullMonth" Width="350px">
+            <DayHeaderStyle Font-Bold="True" Font-Size="8pt" />
+            <NextPrevStyle Font-Bold="True" Font-Size="8pt" ForeColor="#333333" VerticalAlign="Bottom" />
+            <OtherMonthDayStyle ForeColor="#999999" />
+            <SelectedDayStyle BackColor="#333399" ForeColor="White" />
+            <TitleStyle BackColor="White" BorderColor="Black" BorderWidth="4px" Font-Bold="True" Font-Size="12pt" ForeColor="#333399" />
+            <TodayDayStyle BackColor="#CCCCCC" />
+        </asp:Calendar>
     </tr>  
     
     
@@ -73,6 +82,11 @@
     <asp:RadioButton ID="RadioButton2" runat="server" GroupName="gender" Text="Female" OnCheckedChanged="RadioButton2_CheckedChanged" /></td>  
     </tr>  
       <tr>  
+    <td> 
+        <td>  
+    <asp:RadioButton ID="RadioButton3" runat="server" GroupName="role" Text="Freelancer" />  
+    </tr>  
+      <tr>  
     <td>  
     <asp:Label ID="ds" runat="server" Text="User description"></asp:Label></td>  
     <td>  
@@ -90,7 +104,8 @@
     </tr>  
     </table>  
     <asp:Label ID="msg" runat="server"></asp:Label>  
-    </div>  
+    </center>
+                </div>  
 
     </form>
 </body>

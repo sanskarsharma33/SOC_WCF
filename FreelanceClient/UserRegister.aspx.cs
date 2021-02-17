@@ -26,7 +26,7 @@ namespace FreelanceClient
                 user.Password = password.Text;
                 user.Name = name.Text;
                 user.Phone = phone.Text;
-                user.IsFreelancer = true;   
+                user.IsFreelancer = RadioButton3.Checked;   
                 user.DateOfBirth = dob.SelectedDate;
                 user.Details = usrDescription.Text;
                 user.Email = EmailID.Text;
