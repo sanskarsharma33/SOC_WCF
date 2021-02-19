@@ -17,7 +17,7 @@ namespace FreelanceService.Services
         string CreateUser(User user);
 
         [OperationContract]
-        DataSet ViewUser(int id);
+        string UpdateUser(User user);
 
         [OperationContract]
         DataSet AllUsers();

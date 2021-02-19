@@ -88,9 +88,39 @@ namespace FreelanceService.Services
             return result;
         }
 
-        public DataSet ViewUser(int id)
+        public string UpdateUser(User user)
         {
-            throw new NotImplementedException();
+            string result = "";
+            try
+            {
+                SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\ASUS\Documents\soc\FreelanceService\App_Data\Database1.mdf;Integrated Security=True");
+                SqlCommand cmd = new SqlCommand();
+
+                string Query = @"Update UserTable set Username=@Username,Name=@Name
+                                    ,Email=@Email,Phone=@Phone,Gender=@Gender,DateOfBirth=@DateOfBirth,
+                                        IsFreelancer=@IsFreelancer,Details=@Details  Where Id=@Id";
+
+                cmd = new SqlCommand(Query, con);
+                cmd.Parameters.AddWithValue("@Id", user.Id);
+                cmd.Parameters.AddWithValue("@Username", user.Username);
+                cmd.Parameters.AddWithValue("@Name", user.Name);
+                cmd.Parameters.AddWithValue("@Email", user.Email);
+                cmd.Parameters.AddWithValue("@Phone", user.Phone);
+                cmd.Parameters.AddWithValue("@Gender", user.Gender);
+                cmd.Parameters.AddWithValue("@DateOfBirth", user.DateOfBirth);
+                cmd.Parameters.AddWithValue("@IsFreelancer", user.IsFreelancer ? 1 : 0);
+                cmd.Parameters.AddWithValue("@Details", user.Details);
+                Console.WriteLine("HERE");
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
+                result = "Record Updated Successfully !";
+            }
+            catch (Exception ex)
+            {
+                result = ex.Message;
+            }
+            return result;
         }
     }
 }

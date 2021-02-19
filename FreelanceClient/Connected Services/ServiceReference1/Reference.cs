@@ -21,11 +21,11 @@ namespace FreelanceClient.ServiceReference1 {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/CreateUser", ReplyAction="http://tempuri.org/IUserService/CreateUserResponse")]
         System.Threading.Tasks.Task<string> CreateUserAsync(FreelanceService.ModelClasses.User user);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/ViewUser", ReplyAction="http://tempuri.org/IUserService/ViewUserResponse")]
-        System.Data.DataSet ViewUser(int id);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/UpdateUser", ReplyAction="http://tempuri.org/IUserService/UpdateUserResponse")]
+        string UpdateUser(FreelanceService.ModelClasses.User user);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/ViewUser", ReplyAction="http://tempuri.org/IUserService/ViewUserResponse")]
-        System.Threading.Tasks.Task<System.Data.DataSet> ViewUserAsync(int id);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/UpdateUser", ReplyAction="http://tempuri.org/IUserService/UpdateUserResponse")]
+        System.Threading.Tasks.Task<string> UpdateUserAsync(FreelanceService.ModelClasses.User user);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/AllUsers", ReplyAction="http://tempuri.org/IUserService/AllUsersResponse")]
         System.Data.DataSet AllUsers();
@@ -75,12 +75,12 @@ namespace FreelanceClient.ServiceReference1 {
             return base.Channel.CreateUserAsync(user);
         }
         
-        public System.Data.DataSet ViewUser(int id) {
-            return base.Channel.ViewUser(id);
+        public string UpdateUser(FreelanceService.ModelClasses.User user) {
+            return base.Channel.UpdateUser(user);
         }
         
-        public System.Threading.Tasks.Task<System.Data.DataSet> ViewUserAsync(int id) {
-            return base.Channel.ViewUserAsync(id);
+        public System.Threading.Tasks.Task<string> UpdateUserAsync(FreelanceService.ModelClasses.User user) {
+            return base.Channel.UpdateUserAsync(user);
         }
         
         public System.Data.DataSet AllUsers() {
