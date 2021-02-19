@@ -7,10 +7,41 @@
     <title></title>
 </head>
 <body>
+    <header><center><h1>LOGIN</h1></center></header>
     <form id="form1" runat="server">
         <div>
-            <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
-        </div>
+            <center>
+  <table class="auto-style1"> 
+          
+    <tr>  
+    <td>  
+    <asp:Label ID="Label2" runat="server" Text="User Name"></asp:Label>  
+    </td>  
+    <td>  
+    <asp:TextBox ID="username" runat="server" required="true" ></asp:TextBox></td>  
+    </tr>  
+    
+    
+    <tr>  
+    <td>  
+    <asp:Label ID="Label3" runat="server" Text="Password"></asp:Label></td>  
+    <td>  
+    <asp:TextBox ID="password" runat="server" TextMode="Password"></asp:TextBox></td>  
+    </tr>  
+    <tr>  
+    <td>  
+    </td>  
+    <td>  
+    <br />  
+        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" CssClass="btn btn-primary" Text="Login" />
+        <br />
+        
+    </td>  
+    </tr>  
+    </table>  
+    <asp:Label ID="msg" runat="server"></asp:Label>  
+    </center>
+                </div>  
     </form>
 </body>
 </html>

@@ -44,11 +44,12 @@ namespace FreelanceService.Services
                 user.Gender = ds.Tables[0].Rows[0]["Gender"].ToString();
                 user.Details = ds.Tables[0].Rows[0]["Details"].ToString();
                 user.DateOfBirth = DateTime.Parse(ds.Tables[0].Rows[0]["DateOfBirth"].ToString());
-                user.IsFreelancer = bool.Parse(ds.Tables[0].Rows[0]["IsFreelancer"].ToString());
+                user.IsFreelancer = (ds.Tables[0].Rows[0]["IsFreelancer"].ToString()=="True" || ds.Tables[0].Rows[0]["IsFreelancer"].ToString() == "true");
             }
             catch (Exception ex)
             {
-                return null;
+                user.Name = ex.Message;
+                return user;
             }
             return user;
         }

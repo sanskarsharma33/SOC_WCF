@@ -13,12 +13,21 @@ namespace FreelanceClient
         ServiceReference1.UserServiceClient client = new ServiceReference1.UserServiceClient();
         protected void Page_Load(object sender, EventArgs e)
         {
+            
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
             User user;
-            user = client.Login("sanskar", "sar");
+            user = client.Login(username.Text, password.Text);
+            msg.ForeColor = System.Drawing.Color.Green;
             if (user == null)
-                Label1.Text = "Error";
+            {
+                msg.Text = username.Text;
+                msg.ForeColor = System.Drawing.Color.Red;
+            }
             else
-                Label1.Text = user.Username;
+                msg.Text = user.Name;
         }
     }
 }
