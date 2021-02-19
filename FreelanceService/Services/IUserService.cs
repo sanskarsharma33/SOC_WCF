@@ -21,5 +21,8 @@ namespace FreelanceService.Services
 
         [OperationContract]
         DataSet AllUsers();
+
+        [OperationContract]
+        User Login(string username, string password);
     }
 }

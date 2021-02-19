@@ -32,6 +32,12 @@ namespace FreelanceClient.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/AllUsers", ReplyAction="http://tempuri.org/IUserService/AllUsersResponse")]
         System.Threading.Tasks.Task<System.Data.DataSet> AllUsersAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/Login", ReplyAction="http://tempuri.org/IUserService/LoginResponse")]
+        FreelanceService.ModelClasses.User Login(string username, string password);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/Login", ReplyAction="http://tempuri.org/IUserService/LoginResponse")]
+        System.Threading.Tasks.Task<FreelanceService.ModelClasses.User> LoginAsync(string username, string password);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -83,6 +89,14 @@ namespace FreelanceClient.ServiceReference1 {
         
         public System.Threading.Tasks.Task<System.Data.DataSet> AllUsersAsync() {
             return base.Channel.AllUsersAsync();
+        }
+        
+        public FreelanceService.ModelClasses.User Login(string username, string password) {
+            return base.Channel.Login(username, password);
+        }
+        
+        public System.Threading.Tasks.Task<FreelanceService.ModelClasses.User> LoginAsync(string username, string password) {
+            return base.Channel.LoginAsync(username, password);
         }
     }
 }

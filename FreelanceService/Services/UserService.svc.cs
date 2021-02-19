@@ -19,6 +19,40 @@ namespace FreelanceService.Services
             throw new NotImplementedException();
         }
 
+        public User Login(string username, string password)
+        {
+            User user = new User();
+            try
+            {
+                SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\ASUS\Documents\soc\FreelanceService\App_Data\Database1.mdf;Integrated Security=True");
+                SqlCommand cmd = new SqlCommand();
+
+                string Query = @"Select * From UserTable Where Username = @Username and Password = @Password";
+
+                DataSet ds = new DataSet();
+                SqlDataAdapter sda = new SqlDataAdapter(Query, con);
+                sda.SelectCommand.Parameters.AddWithValue("@Username", username);
+                sda.SelectCommand.Parameters.AddWithValue("@Password", password);
+                sda.Fill(ds,"User_table");
+                if (ds.Tables[0].Rows[0]["id"] == null)
+                    return null;
+                user.Id = int.Parse(ds.Tables[0].Rows[0]["id"].ToString());
+                user.Username = ds.Tables[0].Rows[0]["Username"].ToString();
+                user.Name = ds.Tables[0].Rows[0]["Name"].ToString();
+                user.Phone = ds.Tables[0].Rows[0]["Phone"].ToString();
+                user.Email = ds.Tables[0].Rows[0]["Email"].ToString();
+                user.Gender = ds.Tables[0].Rows[0]["Gender"].ToString();
+                user.Details = ds.Tables[0].Rows[0]["Details"].ToString();
+                user.DateOfBirth = DateTime.Parse(ds.Tables[0].Rows[0]["DateOfBirth"].ToString());
+                user.IsFreelancer = bool.Parse(ds.Tables[0].Rows[0]["IsFreelancer"].ToString());
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+            return user;
+        }
+
         public string CreateUser(User user)
         {
             string result = "";
