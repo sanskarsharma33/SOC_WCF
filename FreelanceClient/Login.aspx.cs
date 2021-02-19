@@ -13,7 +13,9 @@ namespace FreelanceClient
         ServiceReference1.UserServiceClient client = new ServiceReference1.UserServiceClient();
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            User user = (User)Session["User"];
+            if(user!=null)
+                Response.Write("Welcome: "+user.Username);
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -27,7 +29,10 @@ namespace FreelanceClient
                 msg.ForeColor = System.Drawing.Color.Red;
             }
             else
-                msg.Text = user.Name;
+            {
+                msg.Text = "Successfully LoggedIn";
+                Session["User"] = user;
+            }
         }
     }
 }
