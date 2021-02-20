@@ -24,7 +24,7 @@ namespace FreelanceService.Services
             string result = "";
             try
             {
-                SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\ASUS\Documents\soc\FreelanceService\App_Data\Database1.mdf;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\CE_120_SEM6\SOC\PROJECT\SOC_WCF\FREELANCESERVICE\APP_DATA\DATABASE1.MDF;Integrated Security=True");
                 SqlCommand cmd = new SqlCommand();
 
                 string Query = @"INSERT INTO UserTable (Username,Name,Email,Phone,Gender, Password,DateOfBirth,IsFreelancer,Details)  

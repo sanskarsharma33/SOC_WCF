@@ -5,3 +5,10 @@ C:\Users\ASUS\Documents\soc\FreelanceService\obj\Debug\FreelanceService.csprojAs
 C:\Users\ASUS\Documents\soc\FreelanceService\obj\Debug\FreelanceService.csproj.CoreCompileInputs.cache
 C:\Users\ASUS\Documents\soc\FreelanceService\obj\Debug\FreelanceService.dll
 C:\Users\ASUS\Documents\soc\FreelanceService\obj\Debug\FreelanceService.pdb
+D:\CE_120_Sem6\SOC\Project\SOC_WCF\FreelanceService\bin\FreelanceService.dll.config
+D:\CE_120_Sem6\SOC\Project\SOC_WCF\FreelanceService\bin\FreelanceService.dll
+D:\CE_120_Sem6\SOC\Project\SOC_WCF\FreelanceService\bin\FreelanceService.pdb
+D:\CE_120_Sem6\SOC\Project\SOC_WCF\FreelanceService\obj\Debug\FreelanceService.csprojAssemblyReference.cache
+D:\CE_120_Sem6\SOC\Project\SOC_WCF\FreelanceService\obj\Debug\FreelanceService.csproj.CoreCompileInputs.cache
+D:\CE_120_Sem6\SOC\Project\SOC_WCF\FreelanceService\obj\Debug\FreelanceService.dll
+D:\CE_120_Sem6\SOC\Project\SOC_WCF\FreelanceService\obj\Debug\FreelanceService.pdb
