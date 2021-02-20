@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ProjectRequestService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:55232/Services/ProjectRequestService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:55232/Services/ProjectRequestService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:55232/Services/ProjectRequestService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/FreelanceService.ModelClasses" />
+      <xsd:import schemaLocation="http://localhost:55232/Services/ProjectRequestService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Data" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IProjectRequestService_DoWork_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoWork" />
+  </wsdl:message>
+  <wsdl:message name="IProjectRequestService_DoWork_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoWorkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProjectRequestService_AddProjectRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddProjectRequest" />
+  </wsdl:message>
+  <wsdl:message name="IProjectRequestService_AddProjectRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddProjectRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProjectRequestService_ViewProjectRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:ViewProjectRequest" />
+  </wsdl:message>
+  <wsdl:message name="IProjectRequestService_ViewProjectRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ViewProjectRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProjectRequestService_ShowProjectRequests_InputMessage">
+    <wsdl:part name="parameters" element="tns:ShowProjectRequests" />
+  </wsdl:message>
+  <wsdl:message name="IProjectRequestService_ShowProjectRequests_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ShowProjectRequestsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProjectRequestService_UpdateProjectRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateProjectRequest" />
+  </wsdl:message>
+  <wsdl:message name="IProjectRequestService_UpdateProjectRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateProjectRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProjectRequestService_DeleteProjectRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteProjectRequest" />
+  </wsdl:message>
+  <wsdl:message name="IProjectRequestService_DeleteProjectRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteProjectRequestResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IProjectRequestService">
+    <wsdl:operation name="DoWork">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProjectRequestService/DoWork" message="tns:IProjectRequestService_DoWork_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProjectRequestService/DoWorkResponse" message="tns:IProjectRequestService_DoWork_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddProjectRequest">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProjectRequestService/AddProjectRequest" message="tns:IProjectRequestService_AddProjectRequest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProjectRequestService/AddProjectRequestResponse" message="tns:IProjectRequestService_AddProjectRequest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ViewProjectRequest">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProjectRequestService/ViewProjectRequest" message="tns:IProjectRequestService_ViewProjectRequest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProjectRequestService/ViewProjectRequestResponse" message="tns:IProjectRequestService_ViewProjectRequest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ShowProjectRequests">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProjectRequestService/ShowProjectRequests" message="tns:IProjectRequestService_ShowProjectRequests_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProjectRequestService/ShowProjectRequestsResponse" message="tns:IProjectRequestService_ShowProjectRequests_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProjectRequest">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProjectRequestService/UpdateProjectRequest" message="tns:IProjectRequestService_UpdateProjectRequest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProjectRequestService/UpdateProjectRequestResponse" message="tns:IProjectRequestService_UpdateProjectRequest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteProjectRequest">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProjectRequestService/DeleteProjectRequest" message="tns:IProjectRequestService_DeleteProjectRequest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProjectRequestService/DeleteProjectRequestResponse" message="tns:IProjectRequestService_DeleteProjectRequest_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IProjectRequestService" type="tns:IProjectRequestService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DoWork">
+      <soap:operation soapAction="http://tempuri.org/IProjectRequestService/DoWork" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddProjectRequest">
+      <soap:operation soapAction="http://tempuri.org/IProjectRequestService/AddProjectRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ViewProjectRequest">
+      <soap:operation soapAction="http://tempuri.org/IProjectRequestService/ViewProjectRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShowProjectRequests">
+      <soap:operation soapAction="http://tempuri.org/IProjectRequestService/ShowProjectRequests" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProjectRequest">
+      <soap:operation soapAction="http://tempuri.org/IProjectRequestService/UpdateProjectRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteProjectRequest">
+      <soap:operation soapAction="http://tempuri.org/IProjectRequestService/DeleteProjectRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ProjectRequestService">
+    <wsdl:port name="BasicHttpBinding_IProjectRequestService" binding="tns:BasicHttpBinding_IProjectRequestService">
+      <soap:address location="http://localhost:55232/Services/ProjectRequestService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

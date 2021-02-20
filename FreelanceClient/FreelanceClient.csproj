@@ -73,6 +73,29 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Connected Services\ProjectRequestAllotedRef\ProjectRequestAlloted.wsdl" />
+    <None Include="Connected Services\ProjectRequestAllotedRef\ProjectRequestAlloted.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ProjectRequestAllotedRef\ProjectRequestAlloted1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ProjectRequestAllotedRef\ProjectRequestAlloted2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ProjectRequestServiceRef\ProjectRequestService.wsdl" />
+    <None Include="Connected Services\ProjectRequestServiceRef\ProjectRequestService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ProjectRequestServiceRef\ProjectRequestService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ProjectRequestServiceRef\ProjectRequestService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ProjectRequestServiceRef\ProjectRequestService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\ProjectServiceRef\ProjectService.wsdl" />
     <None Include="Connected Services\ProjectServiceRef\ProjectService.xsd">
       <SubType>Designer</SubType>
@@ -103,6 +126,20 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <None Include="Connected Services\ProjectRequestAllotedRef\ProjectRequestAlloted.disco" />
+    <None Include="Connected Services\ProjectRequestAllotedRef\configuration91.svcinfo" />
+    <None Include="Connected Services\ProjectRequestAllotedRef\configuration.svcinfo" />
+    <None Include="Connected Services\ProjectRequestAllotedRef\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\ProjectRequestServiceRef\ProjectRequestService.disco" />
+    <None Include="Connected Services\ProjectRequestServiceRef\configuration91.svcinfo" />
+    <None Include="Connected Services\ProjectRequestServiceRef\configuration.svcinfo" />
+    <None Include="Connected Services\ProjectRequestServiceRef\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Login.aspx" />
     <Content Include="AllProject.aspx" />
     <Content Include="UpdateProfile.aspx" />
@@ -112,6 +149,16 @@
     <Content Include="Properties\DataSources\System.Data.DataSet.datasource" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Connected Services\ProjectRequestAllotedRef\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\ProjectRequestServiceRef\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\ProjectServiceRef\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -177,6 +224,7 @@
     <Content Include="Properties\DataSources\FreelanceService.ModelClasses.User.datasource" />
     <Content Include="Properties\DataSources\FreelanceService.ModelClasses.Project.datasource" />
     <Content Include="Properties\DataSources\System.Data.DataTable.datasource" />
+    <Content Include="Properties\DataSources\FreelanceService.ModelClasses.ProjectRequest.datasource" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -188,6 +236,8 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\ProjectRequestAllotedRef\" />
+    <WCFMetadataStorage Include="Connected Services\ProjectRequestServiceRef\" />
     <WCFMetadataStorage Include="Connected Services\ProjectServiceRef\" />
     <WCFMetadataStorage Include="Connected Services\ServiceReference1\" />
   </ItemGroup>

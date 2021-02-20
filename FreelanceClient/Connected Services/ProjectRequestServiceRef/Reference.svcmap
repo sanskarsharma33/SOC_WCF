@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="0537dd74-0f84-44dc-9fe9-bee7a32e82d7" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:55232/Services/ProjectRequestService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ProjectRequestService.disco" MetadataType="Disco" ID="c184228e-121a-4743-8a81-37189fe85f61" SourceId="1" SourceUrl="http://localhost:55232/Services/ProjectRequestService.svc?disco" />
+    <MetadataFile FileName="ProjectRequestService.wsdl" MetadataType="Wsdl" ID="2190d876-03fb-4878-93ff-92421e4da865" SourceId="1" SourceUrl="http://localhost:55232/Services/ProjectRequestService.svc?wsdl" />
+    <MetadataFile FileName="ProjectRequestService.xsd" MetadataType="Schema" ID="0699bd93-d201-4017-84a2-ba26385768a6" SourceId="1" SourceUrl="http://localhost:55232/Services/ProjectRequestService.svc?xsd=xsd3" />
+    <MetadataFile FileName="ProjectRequestService1.xsd" MetadataType="Schema" ID="516e763d-b29b-4209-8dd1-fd65b4dfa7cd" SourceId="1" SourceUrl="http://localhost:55232/Services/ProjectRequestService.svc?xsd=xsd2" />
+    <MetadataFile FileName="ProjectRequestService2.xsd" MetadataType="Schema" ID="754ce533-2fb3-4082-8505-d4a98910b008" SourceId="1" SourceUrl="http://localhost:55232/Services/ProjectRequestService.svc?xsd=xsd1" />
+    <MetadataFile FileName="ProjectRequestService3.xsd" MetadataType="Schema" ID="37de02fe-a699-48c2-a484-076ba0ec997e" SourceId="1" SourceUrl="http://localhost:55232/Services/ProjectRequestService.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

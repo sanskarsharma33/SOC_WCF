@@ -65,6 +65,8 @@
     <Content Include="App_Data\Database1_log.ldf">
       <DependentUpon>Database1.mdf</DependentUpon>
     </Content>
+    <Content Include="Services\ProjectRequestAlloted.svc" />
+    <Content Include="Services\ProjectRequestService.svc" />
     <Content Include="Services\ProjectService.svc" />
     <Content Include="Services\UserService.svc" />
     <Content Include="Web.config" />
@@ -75,7 +77,15 @@
     <Compile Include="ModelClasses\ProjectRequest.cs" />
     <Compile Include="ModelClasses\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\IProjectRequestAlloted.cs" />
+    <Compile Include="Services\IProjectRequestService.cs" />
     <Compile Include="Services\IProjectService.cs" />
+    <Compile Include="Services\ProjectRequestAlloted.svc.cs">
+      <DependentUpon>ProjectRequestAlloted.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Services\ProjectRequestService.svc.cs">
+      <DependentUpon>ProjectRequestService.svc</DependentUpon>
+    </Compile>
     <Compile Include="Services\ProjectService.svc.cs">
       <DependentUpon>ProjectService.svc</DependentUpon>
     </Compile>
