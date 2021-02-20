@@ -142,9 +142,11 @@
     </None>
     <Content Include="Login.aspx" />
     <Content Include="AllProject.aspx" />
+    <Content Include="ShowProjectRequest.aspx" />
     <Content Include="UpdateProfile.aspx" />
     <Content Include="UpdateProject.aspx" />
     <Content Include="UserRegister.aspx" />
+    <Content Include="ViewProjectRequest.aspx" />
     <Content Include="Web.config" />
     <Content Include="Properties\DataSources\System.Data.DataSet.datasource" />
   </ItemGroup>
@@ -184,6 +186,13 @@
       <DependentUpon>AllProject.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShowProjectRequest.aspx.cs">
+      <DependentUpon>ShowProjectRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShowProjectRequest.aspx.designer.cs">
+      <DependentUpon>ShowProjectRequest.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UpdateProfile.aspx.cs">
       <DependentUpon>UpdateProfile.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -204,6 +213,13 @@
     </Compile>
     <Compile Include="UserRegister.aspx.designer.cs">
       <DependentUpon>UserRegister.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewProjectRequest.aspx.cs">
+      <DependentUpon>ViewProjectRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewProjectRequest.aspx.designer.cs">
+      <DependentUpon>ViewProjectRequest.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
