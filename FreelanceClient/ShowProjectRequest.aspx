@@ -7,7 +7,7 @@
     <title></title>
 </head>
 <body>
-
+    <form runat="server">
     <center>
         <h1>Show Project Request</h1>
         <br />
@@ -29,5 +29,6 @@
                   <asp:GridView ID="GridView1" runat="server">
                   </asp:GridView>
     </center>
+    </form>
 </body>
 </html>
