@@ -14,6 +14,7 @@
            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:TextBox ID="prId" runat="server"  ></asp:TextBox>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="Button1" runat="server" OnClick="Button2_Click" Text="Show" />
         <br />
         <br />
+                <asp:Label ID="Label1" runat="server"></asp:Label>
         <br />
                 <table class="auto-style1"> 
       <tr>  
@@ -21,7 +22,7 @@
     <asp:Label ID="fi" runat="server" Text="Freelancer Id"></asp:Label>  
     </td>  
     <td>  
-    <asp:TextBox ID="freelancer" runat="server" required="True" ></asp:TextBox></td>  
+    <asp:TextBox ID="freelancer" runat="server"  ></asp:TextBox></td>  
     </tr>  
     
     <tr>  
@@ -29,7 +30,7 @@
     <asp:Label ID="pi" runat="server" Text="Project Id"></asp:Label>  
     </td>  
     <td>  
-    <asp:TextBox ID="project" runat="server" required="true" ></asp:TextBox></td>  
+    <asp:TextBox ID="project" runat="server"  ></asp:TextBox></td>  
     </tr>  
     <tr>  
     <td>  

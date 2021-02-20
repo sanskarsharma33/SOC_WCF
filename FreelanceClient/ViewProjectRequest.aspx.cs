@@ -21,10 +21,12 @@ namespace FreelanceClient
 
         protected void Button2_Click(object sender, EventArgs e)
         {
+            Label1.Text = prId.Text;
             ProjectRequest pr = client.ViewProjectRequest(int.Parse(prId.Text.ToString()));
             freelancer.Text = pr.FreelancerId.ToString();
             project.Text = pr.ProjectId.ToString();
-            note.Text = pr.Note.ToString();
+            if(pr.Note!=null)
+                note.Text = pr.Note.ToString();
             bid.Text = pr.Bid.ToString();
         }
     }
