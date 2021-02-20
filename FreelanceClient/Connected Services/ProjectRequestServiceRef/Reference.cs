@@ -28,10 +28,10 @@ namespace FreelanceClient.ProjectRequestServiceRef {
         System.Threading.Tasks.Task<string> AddProjectRequestAsync(FreelanceService.ModelClasses.ProjectRequest projectRequest);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IProjectRequestService/ViewProjectRequest", ReplyAction="http://tempuri.org/IProjectRequestService/ViewProjectRequestResponse")]
-        FreelanceService.ModelClasses.ProjectRequest ViewProjectRequest(int id);
+        System.Data.DataTable ViewProjectRequest(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IProjectRequestService/ViewProjectRequest", ReplyAction="http://tempuri.org/IProjectRequestService/ViewProjectRequestResponse")]
-        System.Threading.Tasks.Task<FreelanceService.ModelClasses.ProjectRequest> ViewProjectRequestAsync(int id);
+        System.Threading.Tasks.Task<System.Data.DataTable> ViewProjectRequestAsync(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IProjectRequestService/ShowProjectRequests", ReplyAction="http://tempuri.org/IProjectRequestService/ShowProjectRequestsResponse")]
         System.Data.DataTable ShowProjectRequests(int projectId);
@@ -95,11 +95,11 @@ namespace FreelanceClient.ProjectRequestServiceRef {
             return base.Channel.AddProjectRequestAsync(projectRequest);
         }
         
-        public FreelanceService.ModelClasses.ProjectRequest ViewProjectRequest(int id) {
+        public System.Data.DataTable ViewProjectRequest(int id) {
             return base.Channel.ViewProjectRequest(id);
         }
         
-        public System.Threading.Tasks.Task<FreelanceService.ModelClasses.ProjectRequest> ViewProjectRequestAsync(int id) {
+        public System.Threading.Tasks.Task<System.Data.DataTable> ViewProjectRequestAsync(int id) {
             return base.Channel.ViewProjectRequestAsync(id);
         }
         

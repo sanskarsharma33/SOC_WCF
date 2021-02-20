@@ -43,5 +43,7 @@ namespace FreelanceClient
                 msg.ForeColor = System.Drawing.Color.Red;
             }
         }
+
+        
     }
 }

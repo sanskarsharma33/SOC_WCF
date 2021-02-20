@@ -30,8 +30,8 @@
                     </td>
                     <td>
                         <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="Title" DataValueField="Id">
-                            </asp:DropDownList>
-                            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Database1ConnectionString %>" SelectCommand="SELECT [Id], [Title] FROM [Project]"></asp:SqlDataSource>
+                        </asp:DropDownList>
+                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ProjectRequestConnection %>" SelectCommand="SELECT [Id], [Title] FROM [Project]"></asp:SqlDataSource>
                     </td>
                 </tr> 
                  <tr>  

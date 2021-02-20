@@ -21,7 +21,7 @@ namespace FreelanceService.Services
         string AddProjectRequest(ProjectRequest projectRequest);
 
         [OperationContract]
-        ProjectRequest ViewProjectRequest(int id);
+        DataTable ViewProjectRequest(int id);
 
         [OperationContract]
         DataTable ShowProjectRequests(int projectId);

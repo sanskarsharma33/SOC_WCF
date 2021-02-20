@@ -35,7 +35,19 @@
   <xs:element name="ViewProjectRequestResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/FreelanceService.ModelClasses" minOccurs="0" name="ViewProjectRequestResult" nillable="true" type="q2:ProjectRequest" />
+        <xs:element minOccurs="0" name="ViewProjectRequestResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -68,7 +80,7 @@
   <xs:element name="UpdateProjectRequest">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/FreelanceService.ModelClasses" minOccurs="0" name="projectRequest" nillable="true" type="q3:ProjectRequest" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/FreelanceService.ModelClasses" minOccurs="0" name="projectRequest" nillable="true" type="q2:ProjectRequest" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

@@ -113,39 +113,30 @@ namespace FreelanceService.Services
             throw new NotImplementedException();
         }
 
-        public ProjectRequest ViewProjectRequest(int prid)
+        public DataTable ViewProjectRequest(int prid)
         {
-            ProjectRequest projectRequest = new ProjectRequest();
+            DataTable dt = new DataTable("view");
             try
-            {
+            {   
                 SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
                 SqlCommand cmd = new SqlCommand();
 
                 string Query = @"Select * FROM ProjectRequest where Id=@Id";
-
+                
                 cmd = new SqlCommand(Query, con);
                 cmd.Parameters.AddWithValue("@Id", prid);
                 con.Open();
-                SqlDataReader rdr = cmd.ExecuteReader();
-                    while (rdr.Read())
-                    {
-                        projectRequest.Id = Convert.ToInt32(rdr.GetInt32(0));
-                        projectRequest.FreelancerId = Convert.ToInt32(rdr["FreelanceId"].ToString());
-                        projectRequest.ProjectId = Convert.ToInt32(rdr["ProjectId"].ToString());
-                        projectRequest.Deadline = DateTime.Parse(rdr["Deadline"].ToString());
-                        if(rdr["Note"]!=null)
-                        projectRequest.Note = rdr["Note"].ToString();
-                        projectRequest.Bid = Convert.ToInt32(rdr["Bid"].ToString());
 
-                    }
+                SqlDataAdapter da = new SqlDataAdapter();
+                da.SelectCommand = cmd;
+                da.Fill(dt);
 
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
-                projectRequest.Id = -1;
             }
-            return projectRequest;
+            return dt;
         }
     }
 }
