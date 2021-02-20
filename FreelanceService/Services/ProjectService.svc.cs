@@ -1,6 +1,7 @@
 ﻿using FreelanceService.ModelClasses;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
@@ -17,7 +18,7 @@ namespace FreelanceService.Services
         public string AddProject(Project pr)
         {
             string msg;
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\ASUS\Documents\soc\FreelanceService\App_Data\Database1.mdf;Integrated Security=True");
+                SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
             con.Open();
             SqlCommand cmd = new SqlCommand(@"insert into Project(OwnerId,Type,Details,Title,Deadline,Budget,IsOpen) values(@OwnerId,@Type,@Details,@Title,@Deadline,@Budget,@IsOpen)", con);
             cmd.Parameters.AddWithValue("@OwnerId", pr.OwnerId);
@@ -43,7 +44,7 @@ namespace FreelanceService.Services
         public string DeleteProject(Project pr)
         {
             string msg;
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\ASUS\Documents\soc\FreelanceService\App_Data\Database1.mdf;Integrated Security=True");
+                SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
             con.Open();
             SqlCommand cmd = new SqlCommand("delete Project where Id=@Id", con);
             cmd.Parameters.AddWithValue("@ID", pr.Id);
@@ -88,7 +89,7 @@ namespace FreelanceService.Services
 
         public DataTable GetProjects()
         {
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\ASUS\Documents\soc\FreelanceService\App_Data\Database1.mdf;Integrated Security=True");
+                SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
             con.Open();
             SqlCommand cmd = new SqlCommand("Select * from Project", con);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -102,7 +103,7 @@ namespace FreelanceService.Services
             DataSet ds = new DataSet();
             try
             {
-                SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\ASUS\Documents\soc\FreelanceService\App_Data\Database1.mdf;Integrated Security=True");
+                SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
                 string Query = "SELECT * FROM Project WHERE Id=@Id";
 
                 SqlDataAdapter sda = new SqlDataAdapter(Query, con);
@@ -118,7 +119,7 @@ namespace FreelanceService.Services
         public string UpdateProject(Project pr)
         {
             string msg = "";
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\ASUS\Documents\soc\FreelanceService\App_Data\Database1.mdf;Integrated Security=True");
+                SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
             con.Open();
             SqlCommand cmd = new SqlCommand("Update Project set OwnerId=@OwnerId,Type=@Type,Details=@Details,Title=@Title,Deadline=@Deadline,Budget=@Budget,IsOpen=@IsOpen where Id=@Id", con);
             cmd.Parameters.AddWithValue("@Id", pr.Id);

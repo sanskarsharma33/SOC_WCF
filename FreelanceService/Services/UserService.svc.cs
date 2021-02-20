@@ -1,6 +1,7 @@
 ﻿using FreelanceService.ModelClasses;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
@@ -24,7 +25,7 @@ namespace FreelanceService.Services
             User user = new User();
             try
             {
-                SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\ASUS\Documents\soc\FreelanceService\App_Data\Database1.mdf;Integrated Security=True");
+                SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
                 SqlCommand cmd = new SqlCommand();
 
                 string Query = @"Select * From UserTable Where Username = @Username and Password = @Password";
@@ -59,7 +60,7 @@ namespace FreelanceService.Services
             string result = "";
             try
             {
-                SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\ASUS\Documents\soc\FreelanceService\App_Data\Database1.mdf;Integrated Security=True");
+                SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
                 SqlCommand cmd = new SqlCommand();
 
                 string Query = @"INSERT INTO UserTable (Username,Name,Email,Phone,Gender, Password,DateOfBirth,IsFreelancer,Details)  
@@ -93,7 +94,7 @@ namespace FreelanceService.Services
             string result = "";
             try
             {
-                SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\ASUS\Documents\soc\FreelanceService\App_Data\Database1.mdf;Integrated Security=True");
+                SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
                 SqlCommand cmd = new SqlCommand();
 
                 string Query = @"Update UserTable set Username=@Username,Name=@Name
