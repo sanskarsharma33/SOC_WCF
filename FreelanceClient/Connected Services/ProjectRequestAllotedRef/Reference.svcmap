@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e9fd9388-ef4e-49f1-913c-378b5ac0edc4" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:55232/Services/ProjectRequestAlloted.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ProjectRequestAlloted.xsd" MetadataType="Schema" ID="23dbfc80-5c7a-423d-889a-e33226a01703" SourceId="1" SourceUrl="http://localhost:55232/Services/ProjectRequestAlloted.svc?xsd=xsd2" />
+    <MetadataFile FileName="ProjectRequestAlloted1.xsd" MetadataType="Schema" ID="19ae9111-d843-4d98-ad00-7c83ad7dc65e" SourceId="1" SourceUrl="http://localhost:55232/Services/ProjectRequestAlloted.svc?xsd=xsd0" />
+    <MetadataFile FileName="ProjectRequestAlloted.disco" MetadataType="Disco" ID="f6570b4f-a90f-4050-989b-504aaf6886ae" SourceId="1" SourceUrl="http://localhost:55232/Services/ProjectRequestAlloted.svc?disco" />
+    <MetadataFile FileName="ProjectRequestAlloted2.xsd" MetadataType="Schema" ID="615c88b2-b46e-4145-a6ce-8a71a08998aa" SourceId="1" SourceUrl="http://localhost:55232/Services/ProjectRequestAlloted.svc?xsd=xsd1" />
+    <MetadataFile FileName="ProjectRequestAlloted.wsdl" MetadataType="Wsdl" ID="ed369731-9594-404c-88fc-10e03cf73b6b" SourceId="1" SourceUrl="http://localhost:55232/Services/ProjectRequestAlloted.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

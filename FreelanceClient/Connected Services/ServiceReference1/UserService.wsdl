@@ -14,11 +14,11 @@
   <wsdl:message name="IUserService_CreateUser_OutputMessage">
     <wsdl:part name="parameters" element="tns:CreateUserResponse" />
   </wsdl:message>
-  <wsdl:message name="IUserService_ViewUser_InputMessage">
-    <wsdl:part name="parameters" element="tns:ViewUser" />
+  <wsdl:message name="IUserService_UpdateUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUser" />
   </wsdl:message>
-  <wsdl:message name="IUserService_ViewUser_OutputMessage">
-    <wsdl:part name="parameters" element="tns:ViewUserResponse" />
+  <wsdl:message name="IUserService_UpdateUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserResponse" />
   </wsdl:message>
   <wsdl:message name="IUserService_AllUsers_InputMessage">
     <wsdl:part name="parameters" element="tns:AllUsers" />
@@ -26,18 +26,28 @@
   <wsdl:message name="IUserService_AllUsers_OutputMessage">
     <wsdl:part name="parameters" element="tns:AllUsersResponse" />
   </wsdl:message>
+  <wsdl:message name="IUserService_Login_InputMessage">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_Login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
   <wsdl:portType name="IUserService">
     <wsdl:operation name="CreateUser">
       <wsdl:input wsaw:Action="http://tempuri.org/IUserService/CreateUser" message="tns:IUserService_CreateUser_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IUserService/CreateUserResponse" message="tns:IUserService_CreateUser_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="ViewUser">
-      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/ViewUser" message="tns:IUserService_ViewUser_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/ViewUserResponse" message="tns:IUserService_ViewUser_OutputMessage" />
+    <wsdl:operation name="UpdateUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/UpdateUser" message="tns:IUserService_UpdateUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/UpdateUserResponse" message="tns:IUserService_UpdateUser_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="AllUsers">
       <wsdl:input wsaw:Action="http://tempuri.org/IUserService/AllUsers" message="tns:IUserService_AllUsers_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IUserService/AllUsersResponse" message="tns:IUserService_AllUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/Login" message="tns:IUserService_Login_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/LoginResponse" message="tns:IUserService_Login_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IUserService" type="tns:IUserService">
@@ -51,8 +61,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="ViewUser">
-      <soap:operation soapAction="http://tempuri.org/IUserService/ViewUser" style="document" />
+    <wsdl:operation name="UpdateUser">
+      <soap:operation soapAction="http://tempuri.org/IUserService/UpdateUser" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -62,6 +72,15 @@
     </wsdl:operation>
     <wsdl:operation name="AllUsers">
       <soap:operation soapAction="http://tempuri.org/IUserService/AllUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://tempuri.org/IUserService/Login" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
