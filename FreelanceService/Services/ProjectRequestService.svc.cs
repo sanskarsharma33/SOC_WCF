@@ -44,6 +44,40 @@ namespace FreelanceService.Services
             return result;
         }
 
+        public string DeleteProjectRequest(int id)
+        {
+
+            string msg;
+            try
+            {
+                SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
+                SqlCommand cmd = new SqlCommand();
+
+                string Query = @"Delete ProjectRequest where Id=@Id";
+
+                cmd = new SqlCommand(Query, con);
+                cmd.Parameters.AddWithValue("@Id", id);
+                con.Open();
+                int g = cmd.ExecuteNonQuery();
+                if (g == 1)
+                {
+                    msg = "Successfully delted";
+                }
+                else
+                {
+                    msg = "Failed to delete";
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                msg = "Failed to delete";
+            }
+
+            return msg;
+        }
+
         public void DoWork()
         {
         }

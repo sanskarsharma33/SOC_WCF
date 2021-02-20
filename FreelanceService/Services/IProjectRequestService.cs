@@ -28,6 +28,8 @@ namespace FreelanceService.Services
 
         [OperationContract]
         string UpdateProjectRequest(ProjectRequest projectRequest);
+        [OperationContract]
+        string DeleteProjectRequest(int id);
 
     }
 }

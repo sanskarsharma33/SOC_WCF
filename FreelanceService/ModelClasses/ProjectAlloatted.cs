@@ -7,6 +7,8 @@ namespace FreelanceService.ModelClasses
     public class ProjectAlloatted
     {
         [DataMember]
+        public int Id { get; set; }
+        [DataMember]
         public int ProjectId { get; set; }
 
         [DataMember]
