@@ -1,6 +1,7 @@
 ﻿using FreelanceService.ModelClasses;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
@@ -16,13 +17,13 @@ namespace FreelanceService.Services
         string AddProject(Project proj);
             
         [OperationContract]
-        IEnumerable<Project> GetProjects();
+        DataTable GetProjects();
         
         [OperationContract]
         string UpdateProject(Project proj);
         
         [OperationContract]
-        Project SearchProject(Project proj);
+        DataSet SearchProject(Project proj);
 
         [OperationContract]
         string DeleteProject(Project proj);

@@ -59,7 +59,7 @@ namespace FreelanceService.Services
             return msg;
         }
 
-        public IEnumerable<Project> GetProjects()
+        /*public IEnumerable<Project> GetProjects()
         {
             SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\ASUS\Documents\soc\FreelanceService\App_Data\Database1.mdf;Integrated Security=True");
             con.Open();
@@ -84,11 +84,36 @@ namespace FreelanceService.Services
                     yield return proj;
                 }
             }
+        }*/
+
+        public DataTable GetProjects()
+        {
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\ASUS\Documents\soc\FreelanceService\App_Data\Database1.mdf;Integrated Security=True");
+            con.Open();
+            SqlCommand cmd = new SqlCommand("Select * from Project", con);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable("ProjectTable");
+            da.Fill(dt);
+            return dt;
         }
 
-        public Project SearchProject(Project proj)
+        public DataSet SearchProject(Project proj)
         {
-            throw new NotImplementedException();
+            DataSet ds = new DataSet();
+            try
+            {
+                SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\ASUS\Documents\soc\FreelanceService\App_Data\Database1.mdf;Integrated Security=True");
+                string Query = "SELECT * FROM Project WHERE Id=@Id";
+
+                SqlDataAdapter sda = new SqlDataAdapter(Query, con);
+                sda.SelectCommand.Parameters.AddWithValue("@Id", proj.Id);
+                sda.Fill(ds);
+            }
+            catch (FaultException fex)
+            {
+                throw new FaultException<string>("Error:  " + fex);
+            }
+            return ds;
         }
         public string UpdateProject(Project pr)
         {
