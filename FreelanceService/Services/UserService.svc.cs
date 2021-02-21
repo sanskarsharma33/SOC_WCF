@@ -49,7 +49,7 @@ namespace FreelanceService.Services
             }
             catch (Exception ex)
             {
-                user.Name = ex.Message;
+                user.Name = "Error";
                 return user;
             }
             return user;
